@@ -20,8 +20,14 @@
         >
           <div class="col" style="flex: 1">
             <q-btn
-              class="flex justify-start items-center bg-white text-bold q-mt-xl"
-              style="border-radius: 8px; color: #26c2b9"
+              flat
+              class="flex justify-start items-center bg-white q-mt-xl text-bold"
+              style="
+                border-radius: 8px;
+                color: #40e2e8;
+                font-size: 16px;
+                line-height: 27px;
+              "
             >
               풀타임, 파트타임
             </q-btn>
@@ -86,7 +92,44 @@
               </q-card>
             </div>
           </div>
-          <div class="col" style="flex: 1">reserved</div>
+
+          <div class="col justify-center items-center" style="flex: 1">
+            <div class="row justify-center items-center q-mb-xl">
+              <q-btn
+                flat
+                class="row flex justify-center items-center bg-white q-mt-xl text-bold"
+                style="
+                  border-radius: 8px;
+                  color: #00c696;
+                  font-size: 18px;
+                  line-height: 27px;
+                "
+              >
+                <div
+                  class="q-pa-xsm q-mr-sm"
+                  style="
+                    border-radius: 50%;
+                    width: 26px;
+                    height: 26px;
+                    background-color: #bbf3d2;
+                  "
+                >
+                  $
+                </div>
+
+                <span> 월100만원 </span>
+              </q-btn>
+            </div>
+
+            <CarouselComponent />
+          </div>
+        </div>
+
+        <div
+          class="row w-full flex justify-start items-center text-white"
+          style="font-family: 'Poppins', sans-serif; font-weight: 900"
+        >
+          <SliderComponent />
         </div>
       </div>
     </div>
@@ -95,7 +138,14 @@
 
 <script setup>
 import HeaderComponent from "components/HeaderComponent.vue";
+import CarouselComponent from "components/CarouselComponent.vue";
+import SliderComponent from "components/Slider.vue";
+
+import { ref } from "vue";
+
 defineOptions({
   name: "IndexPage",
 });
+
+const slide = ref(1);
 </script>

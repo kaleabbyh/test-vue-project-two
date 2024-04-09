@@ -51,9 +51,14 @@
       <q-btn
         flat
         rounded
-        color="white"
-        class="flex justify-start items-center text-blue bg-white"
-        style="width: 107px; height: 36px; border-radius: 8px"
+        class="flex justify-start items-center text-bold bg-white"
+        style="
+          width: 107px;
+          height: 36px;
+          border-radius: 8px;
+          color: #6188ff;
+          opacity: 0.9;
+        "
         >문의하기</q-btn
       >
     </div>
