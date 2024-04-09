@@ -21,29 +21,35 @@
           <div class="col" style="flex: 1">
             <q-btn
               flat
-              class="flex justify-start items-center bg-white q-mt-xl text-bold"
+              class="flex justify-start items-center bg-white q-mt-xl text-bold fade-in"
+              :style="{ opacity: showButton ? 1 : 0 }"
               style="
                 border-radius: 8px;
                 color: #40e2e8;
                 font-size: 16px;
                 line-height: 27px;
+                transition: opacity 0.3s ease-out;
               "
             >
               풀타임, 파트타임
             </q-btn>
             <br />
-            <div class="text-bold" style="font-size: 48px; line-height: 62.4px">
+            <div
+              class="text-bold fade-in-up"
+              style="font-size: 48px; line-height: 62.4px"
+            >
               최고의 실력을 가진 <br />
               외국인 인재를 찾고 계신가요?
             </div>
             <br />
-            <div style="font-size: 24px; line-height: 34px">
+            <div class="fade-in-up" style="font-size: 24px; line-height: 34px">
               법률 및 인사관리 부담없이 <br />
               1주일 이내에 원격으로 채용해보세요.
             </div>
             <br />
 
             <div
+              class="fade-in-up"
               style="
                 font-size: 18px;
                 line-height: 27px;
@@ -134,18 +140,79 @@
       </div>
     </div>
   </div>
+
+  <div
+    class="row w-full justify-between items-center"
+    style="background-color: #fbfbfb"
+  >
+    <div style="width: 25%"></div>
+    <div style="width: 75%">
+      <FooterComponent />
+    </div>
+  </div>
 </template>
 
 <script setup>
 import HeaderComponent from "components/HeaderComponent.vue";
 import CarouselComponent from "components/CarouselComponent.vue";
 import SliderComponent from "components/Slider.vue";
+import FooterComponent from "components/FooterComponent.vue";
+import { ref, onMounted } from "vue";
 
-import { ref } from "vue";
+const showButton = ref(false);
 
+onMounted(() => {
+  setTimeout(() => {
+    showButton.value = true;
+  }, 300);
+});
 defineOptions({
   name: "IndexPage",
 });
 
 const slide = ref(1);
 </script>
+
+
+<style>
+@media (max-width: 360px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .q-pa-md {
+    padding: 0.5rem;
+  }
+
+  .flex {
+    justify-content: center;
+  }
+
+  .text-white {
+    text-align: center;
+  }
+}
+
+.fade-in {
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 500ms;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
