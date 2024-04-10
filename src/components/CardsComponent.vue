@@ -8,7 +8,7 @@
         class="flex justify-center items-center"
         style="width: 120px; height: 120px; border-radius: 50%"
       >
-        <img src="https://cdn.quasar.dev/img/mountains.jpg" />
+        <img src="../assets/avatarImg.jpg" />
       </q-avatar>
     </div>
 
