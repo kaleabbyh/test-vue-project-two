@@ -1,18 +1,14 @@
 <template>
   <div class="q-pa-md">
     <div class="q-carousel-wrapper">
-      <q-btn
+      <!-- <q-btn
         push
         flat
         class="q-carousel-button"
         @click="$refs.carousel.previous()"
       >
-        <img
-          src="../assets/prev.png"
-          alt=""
-          style="height: 32px; width: 32px"
-        />
-      </q-btn>
+        <q-icon name="fa-solid fa-chevron-left" />
+      </q-btn> -->
 
       <div class="q-carousel-container bg-transparent">
         <div
@@ -36,9 +32,9 @@
         </div>
       </div>
 
-      <q-btn push flat class="q-carousel-button" @click="$refs.carousel.next()">
-        <img src="../assets/next.png" alt="" style="height: 32px; width: 32px"
-      /></q-btn>
+      <!-- <q-btn push flat class="q-carousel-button" @click="$refs.carousel.next()">
+        <q-icon name="fa-solid fa-chevron-right" />
+      </q-btn> -->
     </div>
   </div>
 </template>

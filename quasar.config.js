@@ -25,6 +25,17 @@ module.exports = configure(function (/* ctx */) {
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
+      "material-icons",
+      "mdi-v7",
+      "ionicons-v4", // last webfont was available in v4.6.3
+      "eva-icons",
+      "fontawesome-v6",
+      "themify",
+      "line-awesome",
+      "bootstrap-icons",
+      "roboto-font", // optional, you are not bound to it
+      "material-icons", // optional, you are not bound to it
+
       // 'ionicons-v4',
       // 'mdi-v7',
       // 'fontawesome-v6',
@@ -32,9 +43,6 @@ module.exports = configure(function (/* ctx */) {
       // 'themify',
       // 'line-awesome',
       // 'roboto-font-latin-ext', // this or either 'roboto-font', NEVER both!
-
-      "roboto-font", // optional, you are not bound to it
-      "material-icons", // optional, you are not bound to it
     ],
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
