@@ -17,7 +17,7 @@
         <HeaderComponent />
 
         <div
-          class="w-full flex justify-center items-center text-white"
+          class="w-full flex justify-center items-start text-white"
           style="font-family: 'Poppins', sans-serif; font-weight: 900"
           id="main"
         >
@@ -147,14 +147,7 @@ import SliderComponent from "components/Slider.vue";
 import FooterComponent from "components/FooterComponent.vue";
 import { ref, onMounted, onBeforeMount, watch } from "vue";
 
-const showButton = ref(false);
 const screenWidth = ref(window.innerWidth);
-
-onMounted(() => {
-  setTimeout(() => {
-    showButton.value = true;
-  }, 300);
-});
 
 onBeforeMount(() => {
   watch(
@@ -198,7 +191,7 @@ const slide = ref(1);
 .fade-in {
   animation-name: fade;
   animation-duration: 1s;
-  animation-delay: 300ms;
+  /* animation-delay: 500ms; */
   animation-fill-mode: forwards;
 }
 
@@ -210,7 +203,7 @@ const slide = ref(1);
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;

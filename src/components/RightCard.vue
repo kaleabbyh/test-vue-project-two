@@ -2,8 +2,11 @@
   <div>
     <q-btn
       flat
-      class="flex justify-start items-center bg-white q-mt-xl text-bold fade-in"
-      :style="{ opacity: showButton ? 1 : 0 }"
+      class="flex justify-start items-center q-mt-xl text-bold fade-in"
+      :style="{
+        opacity: showButton ? 1 : 0,
+        backgroundColor: buttonBackgroundColor,
+      }"
       style="
         border-radius: 8px;
         color: #40e2e8;
@@ -91,16 +94,30 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeMount, watch } from "vue";
+import { ref, onMounted, computed, onBeforeMount, watch } from "vue";
 const showButton = ref(false);
 onMounted(() => {
   setTimeout(() => {
     showButton.value = true;
-  }, 300);
+  }, 500);
 });
 defineOptions({
   name: "RightCard",
 });
+
+const screenWidth = ref(window.innerWidth);
+
+const buttonBackgroundColor = computed(() => {
+  return screenWidth.value < 768 ? "#40e2e8" : "#ffffff";
+});
+
+onBeforeMount(() => {
+  window.addEventListener("resize", handleResize);
+});
+
+const handleResize = () => {
+  screenWidth.value = window.innerWidth;
+};
 </script>
 
 <style lang="scss" scoped>

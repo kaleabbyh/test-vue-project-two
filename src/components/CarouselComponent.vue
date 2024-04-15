@@ -1,14 +1,14 @@
 <template>
   <div class="q-pa-md">
-    <div class="q-carousel-wrapper">
-      <!-- <q-btn
+    <!-- <div class="q-carousel-wrapper">
+      <q-btn
         push
         flat
         class="q-carousel-button"
         @click="$refs.carousel.previous()"
       >
         <q-icon name="fa-solid fa-chevron-left" />
-      </q-btn> -->
+      </q-btn>
 
       <div class="q-carousel-container bg-transparent">
         <div
@@ -32,10 +32,21 @@
         </div>
       </div>
 
-      <!-- <q-btn push flat class="q-carousel-button" @click="$refs.carousel.next()">
+      <q-btn push flat class="q-carousel-button" @click="$refs.carousel.next()">
         <q-icon name="fa-solid fa-chevron-right" />
-      </q-btn> -->
-    </div>
+      </q-btn>
+    </div> -->
+
+    <q-card class="my-card">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg" />
+      <q-card-section>
+        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-subtitle2">by John Doe</div>
+      </q-card-section>
+      <q-card-section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      </q-card-section>
+    </q-card>
   </div>
 </template>
 
