@@ -106,10 +106,11 @@ defineOptions({
 });
 
 const screenWidth = ref(window.innerWidth);
-
-const buttonBackgroundColor = computed(() => {
-  return screenWidth.value < 768 ? "#40e2e8" : "#ffffff";
-});
+const buttonBackgroundColor = "#ffffff";
+// });
+// const buttonBackgroundColor = computed(() => {
+//   return screenWidth.value < 768 ? "#40e2e8" : "#ffffff";
+// });
 
 onBeforeMount(() => {
   window.addEventListener("resize", handleResize);
