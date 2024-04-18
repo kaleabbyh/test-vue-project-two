@@ -27,30 +27,36 @@
 
           <div class="col justify-center items-center" style="flex: 1">
             <div class="row justify-center items-center q-mb-xl">
-              <q-btn
-                flat
-                class="row flex justify-center items-center bg-white q-mt-xl text-bold"
-                style="
-                  border-radius: 8px;
-                  color: #00c696;
-                  font-size: 18px;
-                  line-height: 27px;
-                "
+              <transition
+                appear
+                enter-active-class="animated fadeIn slower delay-5s repeat-2"
+                leave-active-class="animated fadeOut"
               >
-                <div
-                  class="q-pa-xsm q-mr-sm"
+                <q-btn
+                  flat
+                  class="row flex justify-center items-center bg-white q-mt-xl text-bold"
                   style="
-                    border-radius: 50%;
-                    width: 26px;
-                    height: 26px;
-                    background-color: #bbf3d2;
+                    border-radius: 8px;
+                    color: #00c696;
+                    font-size: 18px;
+                    line-height: 27px;
                   "
                 >
-                  <q-icon name="fa-sharp fa-solid fa-dollar-sign" size="xs" />
-                </div>
+                  <div
+                    class="q-pa-xsm q-mr-sm"
+                    style="
+                      border-radius: 50%;
+                      width: 26px;
+                      height: 26px;
+                      background-color: #bbf3d2;
+                    "
+                  >
+                    <q-icon name="fa-sharp fa-solid fa-dollar-sign" size="xs" />
+                  </div>
 
-                <span> 월100만원 </span>
-              </q-btn>
+                  <span> 월100만원 </span>
+                </q-btn>
+              </transition>
             </div>
 
             <CarouselComponent />
@@ -188,16 +194,15 @@ const slide = ref(1);
   }
 }
 
-.fade-in {
+/* .fade-in {
   animation-name: fade;
   animation-duration: 1s;
-  /* animation-delay: 500ms; */
   animation-fill-mode: forwards;
-}
+} */
 
 .fade-in-up {
   animation-name: fadeInUp;
-  animation-duration: 500ms;
+  /* animation-duration: 500ms; */
 }
 
 @keyframes fadeInUp {
